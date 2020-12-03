@@ -17,8 +17,8 @@ public class RedisTestController {
     @Autowired
     RedisService redisService;
     @GetMapping("/save")
-    public String save(String key,String value){
-        redisService.set(key,value);
+    public String save(String key,String value,int time){
+        redisService.set(key,value,time);
         return "save success";
     }
     @GetMapping("/get")

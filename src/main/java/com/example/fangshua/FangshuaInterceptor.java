@@ -17,7 +17,7 @@ import java.io.OutputStream;
 
 /**
  * @ClassName FangshuaInterceptor
- * @Description: TODO
+ * @Description: 接口防刷拦截器
  * @Author fengjc
  * @Date 2020/12/3
  * @Version V1.0

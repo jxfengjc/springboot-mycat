@@ -1,6 +1,7 @@
 package com.example.fangshua;
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @Version V1.0
  **/
 @RestController
+@RequestMapping("/fangshua")
 public class TestFangShuaController {
     @AccessLimit(seconds = 5,maxCoint = 2,needLogin = false)
     @GetMapping("/test")

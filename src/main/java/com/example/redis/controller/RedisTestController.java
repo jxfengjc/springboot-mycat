@@ -1,5 +1,6 @@
 package com.example.redis.controller;
 
+import com.example.fangshua.AccessLimit;
 import com.example.redis.service.RedisService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -23,6 +24,7 @@ public class RedisTestController {
         redisService.set(key,value,time);
         return "save success";
     }
+    @AccessLimit(seconds = 5,maxCoint = 2,needLogin = false)
     @GetMapping("/get")
     public String get(String key){
         return redisService.get(key);

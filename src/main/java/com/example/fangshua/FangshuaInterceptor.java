@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 import org.springframework.web.method.HandlerMethod;
+import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
 import javax.servlet.http.HttpServletRequest;
@@ -22,7 +23,7 @@ import java.io.OutputStream;
  * @Version V1.0
  **/
 @Component
-public class FangshuaInterceptor extends HandlerInterceptorAdapter {
+public class FangshuaInterceptor implements HandlerInterceptor {
     @Autowired
     RedisService redisService;
     @Override

@@ -3,6 +3,7 @@ package com.example.redis.controller;
 import com.example.fangshua.AccessLimit;
 import com.example.redis.service.RedisService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.env.Environment;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -19,6 +20,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class RedisTestController {
     @Autowired
     RedisService redisService;
+    @Autowired
+    Environment env;
     @GetMapping("/save")
     public String save(String key,String value,int time){
         redisService.set(key,value,time);
@@ -28,6 +31,12 @@ public class RedisTestController {
     @GetMapping("/get")
     public String get(String key){
         return redisService.get(key);
+
+    }
+    @GetMapping("/getFile")
+    public String getpre(){
+        String file=  env.getActiveProfiles()[0];
+        return file;
 
     }
 }

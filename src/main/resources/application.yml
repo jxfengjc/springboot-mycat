@@ -3,13 +3,13 @@ spring:
     ####写数据源
     update:
       jdbc-url: jdbc:mysql://123.56.152.42:3308/test
-      driver-class-name: com.mysql.jdbc.Driver
+      driver-class-name: com.mysql.cj.jdbc.Driver
       username: root
       password: 123456
     ###读数据源
     select:
       jdbc-url: jdbc:mysql://123.56.152.42:3306/test
-      driver-class-name: com.mysql.jdbc.Driver
+      driver-class-name: com.mysql.cj.jdbc.Driver
       username: root
       password: 123456
     type: com.alibaba.druid.pool.DruidDataSource
@@ -25,3 +25,6 @@ spring:
         max-idle: 8
         min-idle: 0
     timeout: 10000
+  data:
+    mongodb:
+      uri: mongodb://123.56.152.42:27017/app

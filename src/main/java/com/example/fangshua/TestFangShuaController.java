@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * @ClassName TestFangShua
- * @Description: TODO
+ * @Description: 接口防刷测试，使用自定义注解方式
  * @Author fengjc
  * @Date 2020/12/3
  * @Version V1.0

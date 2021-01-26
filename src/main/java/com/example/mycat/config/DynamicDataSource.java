@@ -1,6 +1,6 @@
-package com.example.demo.config;
+package com.example.mycat.config;
 
-import com.example.demo.thread.DataSourceContextHolder;
+import com.example.mycat.thread.DataSourceContextHolder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Primary;

@@ -1,6 +1,6 @@
-package com.example.demo.config;
+package com.example.mycat.config;
 
-import com.example.demo.thread.DataSourceContextHolder;
+import com.example.mycat.thread.DataSourceContextHolder;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
@@ -21,7 +21,7 @@ import org.springframework.stereotype.Component;
 @Order(0) // Order设定AOP执行顺序 使之在数据库事务上先执行  动态数据源事务先执行的
 public class SwitchDataSourceAOP {
     // 这里切到你的方法目录
-    @Before("execution(* com.example.demo.*.*(..))")   //扫包范围是业务逻辑层
+    @Before("execution(* com.example.mycat.*.*(..))")   //扫包范围是业务逻辑层
     public void process(JoinPoint joinPoint) {
         String methodName = joinPoint.getSignature().getName();  //通过反射获取到方法名称
         if (methodName.startsWith("get") || methodName.startsWith("count") || methodName.startsWith("find")

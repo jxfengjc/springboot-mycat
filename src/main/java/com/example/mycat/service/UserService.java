@@ -1,7 +1,7 @@
-package com.example.demo.service;
+package com.example.mycat.service;
 
-import com.example.demo.entity.UserEntity;
-import com.example.demo.mapper.UserMapper;
+import com.example.mycat.entity.UserEntity;
+import com.example.mycat.mapper.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

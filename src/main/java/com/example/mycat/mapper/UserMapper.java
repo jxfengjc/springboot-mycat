@@ -1,10 +1,8 @@
-package com.example.demo.mapper;
-import com.example.demo.entity.UserEntity;
+package com.example.mycat.mapper;
+import com.example.mycat.entity.UserEntity;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
-import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Repository;
 
 import java.util.List;
 

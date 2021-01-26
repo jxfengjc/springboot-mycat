@@ -1,4 +1,4 @@
-package com.example.demo.thread;
+package com.example.mycat.thread;
 
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;

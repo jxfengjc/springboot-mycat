@@ -24,11 +24,9 @@ public class AopTestController {
     }
     @GetMapping("throw")
     public String throwTest() throws ArithmeticException{
-        try {
-            int a =1/0;
-        }catch (Exception e){
 
-        }
+            int a =1/0;
+
         return "success";
     }
 }

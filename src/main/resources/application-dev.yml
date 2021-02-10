@@ -1,4 +1,6 @@
 spring:
+  application:
+    name: springboot-demo
   datasource:
     ####写数据源
     update:

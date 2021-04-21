@@ -1,5 +1,6 @@
 package com.example.advice;
 
+import com.example.aop.UserException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,7 +30,9 @@ public class GlobalExceptionHandler {
     @ResponseBody
     public String  exceptionHandler(HttpServletRequest request,Exception e) throws UnknownHostException {
         //其他异常处理（自定义的异常）
-
+         if(e instanceof UserException){
+              return  e.toString();
+         }
         //剩下的异常处理
         String activeProfile = env.getActiveProfiles()[0];
         StackTraceElement[] err = e.getStackTrace();
@@ -47,7 +50,7 @@ public class GlobalExceptionHandler {
             }
         }
         //钉钉处理
-        DingDingUtil.sendExceptionMsg(activeProfile,"测试"+ request.getRequestURI(),sb.toString());
+     //   DingDingUtil.sendExceptionMsg(activeProfile,"测试"+ request.getRequestURI(),sb.toString());
         return sb.toString();
     }
 }
